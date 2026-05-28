@@ -47,6 +47,8 @@ export default async function createQuestionCollection() {
     ),
   ]);
   console.log("Question Attribites Created");
+
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   // create indexes
   await Promise.all([
     databases.createIndex(
